@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Home Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="dashboard">
+
+<header class="dashboard-header">
+  <div class="brand">
+    <h1>Smart Home</h1>
+    <p>Device Control Dashboard</p>
+  </div>
+  <div class="status-pill">All systems online</div>
+</header>
+
+<main class="dashboard-main">
+
+<section class="card summary">
+  <h2>Home Summary</h2>
+  <p>Devices ON: <strong id="onCount">0</strong></p>
+  <p>Total Power: <strong id="totalPower">0 W</strong></p>
+
+  <hr style="margin:12px 0">
+
+  <h3 style="font-size:0.9rem">Add Device</h3>
+
+  <select id="deviceType">
+    <option value="light">Light</option>
+    <option value="fan">Fan</option>
+    <option value="ac">AC</option>
+    <option value="tv">TV</option>
+    <option value="wifi">Wi‑Fi</option>
+    <option value="geyser">Geyser</option>
+    <option value="fridge">Refrigerator</option>
+  </select>
+
+  <input type="text" id="deviceName" placeholder="Device name">
+  <button id="addDeviceBtn">Add Device</button>
+</section>
+
+<section class="card">
+  <h2>Devices</h2>
+  <div class="devices-grid" id="devicesGrid"></div>
+</section>
+
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
